@@ -29,6 +29,7 @@
                 margin-left: 3vw;
                 padding: 0.5vw;
                 text-decoration: none;
+                cursor: pointer;
             }
             
             #topNav a:hover {
@@ -50,6 +51,30 @@
                 background-color: rgba(0, 0, 0, 1);
             }
             
+            .smallSplit {
+                width: 20vw;
+                margin-top: 5vw;
+                margin-left: auto;
+                margin-right: 0;
+                height: 0.3vw;
+                color: rgba(0, 0, 0, 1);
+                background-color: rgba(0, 0, 0, 1);
+            }
+            
+            .trioSplit {
+                position: relative;
+                width: 5vw;
+                margin-left: 0;
+                height: 0.1vw;
+                color: rgba(0, 0, 0, 1);
+                background-color: rgba(0, 0, 0, 1);
+            }
+            
+            #foldBody {
+                position: static;
+                height: 100%;
+            }
+            
             #textBody {
                 position: absolute;
                 left: 10vw;
@@ -57,11 +82,34 @@
             }
             
             #textBody h1 {
-                font-size: 2.5vw;
+                margin-top: 15vw;
+                font-size: 4vw;
             }
             
-            #textBody p {
+            .indent {
+                margin-left: 4vw;
+            }
+            
+            .inlineBlock {
+                display: inline-block;
+            }
+            
+            .trioBlock {
+                max-width: 20vw;
                 font-size: 2vw;
+                padding: 2vw;
+                border-style: solid;
+                border-width: 0.3vw;
+            }
+            
+            .trioBlock p.explanation {
+                font-size: 1.5vw;
+            }
+            
+            .siteIcon {
+                width: 20vw;
+                border-style: solid;
+                border-width: 0.3vw;
             }
             
             #spacerDiv {
@@ -79,17 +127,48 @@
     </head>
     <body>
         <img id="mainLogo" src="images/MainLogo1024.png" />
-        <span id="topNav"><a href="#">Services</a><a href="#">Products</a><a href="#">Contact</a></span>
+        <span id="topNav"><a onclick="slideOnto('#services')">Services</a><a onclick="slideOnto('#products')">Products</a><a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a></span>
         <hr id="midSplit" />
+        <div id="foldDiv"></div>
         <div id="textBody">
-            <h1>Services</h1>
-            <p>     //R&D</p>
+
+            <h1 id="clients">//Clients</h1>
+            <img src='images/AMT.png' alt='AMT' class='siteIcon'>
+            <img src='images/UMMS.png' alt='UMMS' class='siteIcon'>
+            <img src='images/TUFTS.png' alt='TUFTS' class='siteIcon'>
+            <img src='images/IGS.png' alt='IGS' class='siteIcon'>
+            <img src='images/SGID.png' alt='SGID' class='siteIcon'>
+            <img src='images/P75.png' alt='P75' class='siteIcon'>
+            <hr class="smallSplit" />
+
+            <h1 id="services">//Consulting Services</h1>
+            <div>
+                <div class="trioBlock inlineBlock">Prototyping<hr class="trioSplit"><p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p></div>
+                <div class="trioBlock indent inlineBlock">R&D<hr class="trioSplit"><p class="explanation">Leverage our experience fulfilling multiple government-funded research projects.</p></div>
+                <div class="trioBlock indent inlineBlock">Product Architecture<hr class="trioSplit"><p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p></div>
+            </div>
+            <hr class="smallSplit" />
+
+            
+            <h1 id="products">//Products</h1>
+            <img src='images/Kiosk.png' alt='Kiosk' class='siteIcon'>
+            <img src='images/Delivery.png' alt='Delivery' class='siteIcon'>
+            <img src='images/Photos.png' alt='Photos' class='siteIcon'>
+            <img src='images/Motion.png' alt='Motion' class='siteIcon'>
+            <img src='images/Class.png' alt='Class' class='siteIcon'>
+            <hr class="smallSplit" />
         </div>
 <!--
         <div id="spacerDiv"></div>
         <div id="bottomDiv"></div>
 -->
         <script>
+            var slideOnto = function(elementSelector) {
+                document.querySelector(elementSelector).scrollIntoView({
+                    block: "start",
+                    behavior: "smooth"
+                });
+            };
         </script>
     </body>
 </html>
