@@ -11,6 +11,11 @@
                 font-size: 3vw;
             }
             
+            a {
+                text-docoration: none;
+                color: rgba(0, 0, 0, 1);
+            }
+            
             #mainLogo {
                 position: absolute;
                 width: 18vw;
@@ -44,7 +49,8 @@
             #midSplit {
                 position: absolute;
                 width: 60vw;
-                right: 0;
+                top: 1vw;
+                right: 1fw;
                 top: 45vw;
                 height: 0.5vw;
                 color: rgba(0, 0, 0, 1);
@@ -70,6 +76,10 @@
                 background-color: rgba(0, 0, 0, 1);
             }
             
+            #products {
+                perspective: 1024px;
+            }
+            
             #foldBody {
                 position: static;
                 height: 100%;
@@ -90,20 +100,41 @@
                 margin-left: 4vw;
             }
             
+            .unindent {
+                margin-left: -4vw;
+            }
+            
             .inlineBlock {
                 display: inline-block;
             }
             
             .trioBlock {
-                max-width: 20vw;
+                width: 20vw;
                 font-size: 2vw;
                 padding: 2vw;
+                margin-top: 4vw;
                 border-style: solid;
                 border-width: 0.3vw;
+                cursor: pointer;
             }
             
             .trioBlock p.explanation {
                 font-size: 1.5vw;
+            }
+            
+            .absolute-grid {
+                position: relative;
+            }
+            
+            .thumbnail {
+                position: absolute;
+                top: 1vw;
+                right: 1vw;
+                width: 4vw;
+                border-style: solid;
+                border-width: 0.15vw;
+                border-color: rgba(0, 0, 0, 0.4);
+                margin-left: 1vw;
             }
             
             .siteIcon {
@@ -123,6 +154,11 @@
                 height: 5vw;
                 background-color: rgba(0, 0, 0, 1);
             }
+            
+            #footer {
+                font-size: 1vw;
+                text-align: center;
+            }
         </style>
     </head>
     <body>
@@ -132,6 +168,49 @@
         <div id="foldDiv"></div>
         <div id="textBody">
 
+
+
+            <h1 id="services">//Consulting Services</h1>
+            <div class="unindent">
+                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Prototyping<hr class="trioSplit"><p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p></div></a>
+                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">R&D<hr class="trioSplit"><p class="explanation">Leverage our experience fulfilling multiple government-funded research projects.</p></div></a>
+                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Product Architecture<hr class="trioSplit"><p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p></div></a>
+            </div>
+            <hr class="smallSplit" />
+
+            
+            <h1 id="products">//Products</h1>
+            <div class="unindent">
+                <div class="trioBlock indent inlineBlock absolute-grid">
+                    Instance Kiosk<img class="thumbnail" src="images/Kiosk.png">
+                    <hr class="trioSplit">
+                    <p class="explanation">Coming Soon.</p>
+                </div>
+                <div class="trioBlock indent inlineBlock absolute-grid">
+                    Instance Delivery<img class="thumbnail" src="images/Delivery.png">
+                    <hr class="trioSplit">
+                    <p class="explanation">Coming Soon.</p>
+                </div>
+                <div class="trioBlock indent inlineBlock absolute-grid">
+                    Instance Photos<img class="thumbnail" src="images/Photos.png">
+                    <hr class="trioSplit">
+                    <p class="explanation">Coming Soon.</p>
+                </div>
+                <div class="trioBlock indent inlineBlock absolute-grid">
+                    Instance Motion<img class="thumbnail" src="images/Motion.png">
+                    <hr class="trioSplit">
+                    <p class="explanation">Coming Soon.</p>
+                </div>
+                <div class="trioBlock indent inlineBlock absolute-grid">
+                    Instance Class<img class="thumbnail" src="images/Class.png">
+                    <hr class="trioSplit">
+                    <p class="explanation">Coming Soon.</p>
+                </div>
+            </div>
+            <hr class="smallSplit" />
+            
+            
+            
             <h1 id="clients">//Clients</h1>
             <img src='images/AMT.png' alt='AMT' class='siteIcon'>
             <img src='images/UMMS.png' alt='UMMS' class='siteIcon'>
@@ -141,22 +220,13 @@
             <img src='images/P75.png' alt='P75' class='siteIcon'>
             <hr class="smallSplit" />
 
-            <h1 id="services">//Consulting Services</h1>
-            <div>
-                <div class="trioBlock inlineBlock">Prototyping<hr class="trioSplit"><p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p></div>
-                <div class="trioBlock indent inlineBlock">R&D<hr class="trioSplit"><p class="explanation">Leverage our experience fulfilling multiple government-funded research projects.</p></div>
-                <div class="trioBlock indent inlineBlock">Product Architecture<hr class="trioSplit"><p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p></div>
-            </div>
-            <hr class="smallSplit" />
-
             
-            <h1 id="products">//Products</h1>
-            <img src='images/Kiosk.png' alt='Kiosk' class='siteIcon'>
-            <img src='images/Delivery.png' alt='Delivery' class='siteIcon'>
-            <img src='images/Photos.png' alt='Photos' class='siteIcon'>
-            <img src='images/Motion.png' alt='Motion' class='siteIcon'>
-            <img src='images/Class.png' alt='Class' class='siteIcon'>
+            <h1 id="cases">//Case Studies</h1>
+            <div class="trioBlock"><p>Coming Soon.</p></div>
             <hr class="smallSplit" />
+            
+            <p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
+        
         </div>
 <!--
         <div id="spacerDiv"></div>
