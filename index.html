@@ -46,11 +46,18 @@
                 color: rgba(0, 0, 0, 1);
             }
             
+            #console {
+                position: absolute;
+                font-size: 2vw;
+                top: 43vw;
+                left: 40vw;
+                
+            }
+            
             #midSplit {
                 position: absolute;
                 width: 60vw;
-                top: 1vw;
-                right: 1fw;
+                right: 0vw;
                 top: 45vw;
                 height: 0.5vw;
                 color: rgba(0, 0, 0, 1);
@@ -164,12 +171,10 @@
     <body>
         <img id="mainLogo" src="images/MainLogo1024.png" />
         <span id="topNav"><a onclick="slideOnto('#services')">Services</a><a onclick="slideOnto('#products')">Products</a><a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a></span>
+        <span id="console">//Cut Once. Measure Once. Repeat.</span>
         <hr id="midSplit" />
         <div id="foldDiv"></div>
         <div id="textBody">
-
-
-
             <h1 id="services">//Consulting Services</h1>
             <div class="unindent">
                 <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Prototyping<hr class="trioSplit"><p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p></div></a>
@@ -177,8 +182,6 @@
                 <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Product Architecture<hr class="trioSplit"><p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p></div></a>
             </div>
             <hr class="smallSplit" />
-
-            
             <h1 id="products">//Products</h1>
             <div class="unindent">
                 <div class="trioBlock indent inlineBlock absolute-grid">
@@ -208,9 +211,6 @@
                 </div>
             </div>
             <hr class="smallSplit" />
-            
-            
-            
             <h1 id="clients">//Clients</h1>
             <img src='images/AMT.png' alt='AMT' class='siteIcon'>
             <img src='images/UMMS.png' alt='UMMS' class='siteIcon'>
@@ -219,14 +219,10 @@
             <img src='images/SGID.png' alt='SGID' class='siteIcon'>
             <img src='images/P75.png' alt='P75' class='siteIcon'>
             <hr class="smallSplit" />
-
-            
             <h1 id="cases">//Case Studies</h1>
             <div class="trioBlock"><p>Coming Soon.</p></div>
             <hr class="smallSplit" />
-            
             <p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
-        
         </div>
 <!--
         <div id="spacerDiv"></div>
