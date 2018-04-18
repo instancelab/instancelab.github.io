@@ -5,16 +5,32 @@
         <title>Instance Lab LLC</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <style>
-            html, body {
-                height: 100%;
+            html {
+                min-height: 100%;
+                position: relative;
                 margin: 0;
                 font-family: Roboto;
                 font-size: 3vw;
             }
             
+            body {
+                height: 100%;
+                margin: 0;
+            }
+            
             a {
                 text-decoration: none;
                 color: rgba(0, 0, 0, 1);
+            }
+            
+            #siteBorder {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                overflow: auto;
+/*                z-index: -1;*/
             }
             
             #mainLogo {
@@ -63,6 +79,7 @@
                 height: 0.5vw;
                 color: rgba(0, 0, 0, 1);
                 background-color: rgba(0, 0, 0, 1);
+                border-color: rgba(0, 0, 0, 1);
             }
             
             .smallSplit {
@@ -124,6 +141,12 @@
                 border-style: solid;
                 border-width: 0.3vw;
                 cursor: pointer;
+                transition: all 0.5s;
+            }
+            
+            .trioBlock:hover {
+                background-color: rgba(0, 0, 0, 0.15);
+                transition: all 0.5s;
             }
             
             .trioBlock p.explanation {
@@ -170,75 +193,73 @@
         </style>
     </head>
     <body>
-        <img id="mainLogo" src="images/MainLogo1024.png" />
-        <span id="topNav"><a onclick="slideOnto('#services')">Services</a><a onclick="slideOnto('#products')">Products</a><a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a></span>
-        <span id="console"></span>
-        <hr id="midSplit" />
-        <div id="foldDiv"></div>
-        <div id="textBody">
-            <h1 id="services">//Consulting Services</h1>
-            <div class="unindent">
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Prototyping<hr class="trioSplit"><p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p></div></a>
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">R&D<hr class="trioSplit"><p class="explanation">Leverage our experience fulfilling multiple government-funded research projects.</p></div></a>
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Product Architecture<hr class="trioSplit"><p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p></div></a>
+        <div id="siteBorder">
+            <img id="mainLogo" src="images/MainLogo1024.png" />
+            <span id="topNav"><a onclick="slideOnto('#services')">Services</a><a onclick="slideOnto('#products')">Products</a><a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a></span>
+            <span id="console"></span>
+            <hr id="midSplit" />
+            <div id="foldDiv"></div>
+            <div id="textBody">
+                <h1 id="services">//Consulting Services</h1>
+                <div class="unindent">
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Prototyping<hr class="trioSplit"><p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p></div></a>
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">R&D<hr class="trioSplit"><p class="explanation">Leverage our experience fulfilling multiple government-funded research projects.</p></div></a>
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Product Architecture<hr class="trioSplit"><p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p></div></a>
+                </div>
+                <hr class="smallSplit" />
+                <h1 id="products">//Products</h1>
+                <div class="unindent">
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+                        <div class="trioBlock indent inlineBlock absolute-grid">
+                            Instance Kiosk<img class="thumbnail" src="images/Kiosk.png">
+                            <hr class="trioSplit">
+                            <p class="explanation">Kiosk solution offering easy web integrations and integrated on-screen keyboard</p>
+                        </div>
+                    </a>
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+                        <div class="trioBlock indent inlineBlock absolute-grid">
+                            Instance Delivery<img class="thumbnail" src="images/Delivery.png">
+                            <hr class="trioSplit">
+                            <p class="explanation">Simple content delivery add-on for Instance products with added solutions for user re-engagement</p>
+                        </div>
+                    </a>
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+                        <div class="trioBlock indent inlineBlock absolute-grid">
+                            Instance Photos<img class="thumbnail" src="images/Photos.png">
+                            <hr class="trioSplit">
+                            <p class="explanation">Event photo booth solution with novel strategies for frictionless UX and re-engagement</p>
+                        </div>
+                    </a>
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+                        <div class="trioBlock indent inlineBlock absolute-grid">
+                            Instance Motion<img class="thumbnail" src="images/Motion.png">
+                            <hr class="trioSplit">
+                            <p class="explanation">Engaging visualization installation using body gestures</p>
+                        </div>
+                    </a>
+                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+                        <div class="trioBlock indent inlineBlock absolute-grid">
+                            Instance Class<img class="thumbnail" src="images/Class.png">
+                            <hr class="trioSplit">
+                            <p class="explanation">Virtual reality suite for multimedia educational apps<br><br></p>
+                        </div>
+                    </a>
+                </div>
+                <hr class="smallSplit" />
+                <h1 id="clients">//Clients</h1>
+                <img src='images/AMT.png' alt='AMT' class='siteIcon'>
+                <img src='images/UMMS.png' alt='UMMS' class='siteIcon'>
+                <img src='images/TUFTS.png' alt='TUFTS' class='siteIcon'>
+                <img src='images/IGS.png' alt='IGS' class='siteIcon'>
+                <img src='images/SGID.png' alt='SGID' class='siteIcon'>
+                <img src='images/P75.png' alt='P75' class='siteIcon'>
+                <hr class="smallSplit" />
+                <h1 id="cases">//Case Studies</h1>
+                <div class="trioBlock"><p>Coming Soon.</p></div>
+                <hr class="smallSplit" />
+                <p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
             </div>
-            <hr class="smallSplit" />
-            <h1 id="products">//Products</h1>
-            <div class="unindent">
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                    <div class="trioBlock indent inlineBlock absolute-grid">
-                        Instance Kiosk<img class="thumbnail" src="images/Kiosk.png">
-                        <hr class="trioSplit">
-                        <p class="explanation">Kiosk solution offering easy web integrations and integrated on-screen keyboard</p>
-                    </div>
-                </a>
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                    <div class="trioBlock indent inlineBlock absolute-grid">
-                        Instance Delivery<img class="thumbnail" src="images/Delivery.png">
-                        <hr class="trioSplit">
-                        <p class="explanation">Simple content delivery add-on for Instance products with added solutions for user re-engagement</p>
-                    </div>
-                </a>
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                    <div class="trioBlock indent inlineBlock absolute-grid">
-                        Instance Photos<img class="thumbnail" src="images/Photos.png">
-                        <hr class="trioSplit">
-                        <p class="explanation">Event photo booth solution with novel strategies for frictionless UX and re-engagement</p>
-                    </div>
-                </a>
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                    <div class="trioBlock indent inlineBlock absolute-grid">
-                        Instance Motion<img class="thumbnail" src="images/Motion.png">
-                        <hr class="trioSplit">
-                        <p class="explanation">Engaging visualization installation using body gestures</p>
-                    </div>
-                </a>
-                <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                    <div class="trioBlock indent inlineBlock absolute-grid">
-                        Instance Class<img class="thumbnail" src="images/Class.png">
-                        <hr class="trioSplit">
-                        <p class="explanation">Virtual reality suite for multimedia educational apps<br><br></p>
-                    </div>
-                </a>
-            </div>
-            <hr class="smallSplit" />
-            <h1 id="clients">//Clients</h1>
-            <img src='images/AMT.png' alt='AMT' class='siteIcon'>
-            <img src='images/UMMS.png' alt='UMMS' class='siteIcon'>
-            <img src='images/TUFTS.png' alt='TUFTS' class='siteIcon'>
-            <img src='images/IGS.png' alt='IGS' class='siteIcon'>
-            <img src='images/SGID.png' alt='SGID' class='siteIcon'>
-            <img src='images/P75.png' alt='P75' class='siteIcon'>
-            <hr class="smallSplit" />
-            <h1 id="cases">//Case Studies</h1>
-            <div class="trioBlock"><p>Coming Soon.</p></div>
-            <hr class="smallSplit" />
-            <p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
         </div>
-<!--
-        <div id="spacerDiv"></div>
-        <div id="bottomDiv"></div>
--->
         <script>
             var slideOnto = function(elementSelector) {
                 document.querySelector(elementSelector).scrollIntoView({
