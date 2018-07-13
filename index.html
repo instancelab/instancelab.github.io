@@ -1,272 +1,334 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Instance Lab LLC</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <style>
-            html {
-                min-height: 100%;
-                position: relative;
-                margin: 0;
-                font-family: Roboto;
-                font-size: 3vw;
-            }
-            
-            body {
-                height: 100%;
-                margin: 0;
-            }
-            
-            a {
-                text-decoration: none;
-                color: rgba(0, 0, 0, 1);
-            }
-            
-            #siteBorder {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                overflow: auto;
-/*                z-index: -1;*/
-            }
-            
-            #mainLogo {
-                position: absolute;
-                width: 18vw;
-                left: 8vw;
-                top: 10vw;
-            }
-            
-            #topNav {
-                position: absolute;
-                right: 8vw;
-                top: 8vw;
-            }
-            
-            #topNav a {
-                color: rgba(0, 0, 0, 1);
-                margin-left: 3vw;
-                padding: 0.5vw;
-                text-decoration: none;
-                cursor: pointer;
-            }
-            
-            #topNav a:hover {
-                background-color: rgba(0, 0, 0, 0.15);
-                transition: all 0.5s;
-            }
-            
-            #topNav a:visited {
-                color: rgba(0, 0, 0, 1);
-            }
-            
-            #console {
-                position: absolute;
-                font-size: 2vw;
-                top: 43vw;
-                left: 40vw;
-                
-            }
-            
-            #midSplit {
-                position: absolute;
-                width: 60vw;
-                right: 0vw;
-                top: 45vw;
-                height: 0.5vw;
-                color: rgba(0, 0, 0, 1);
-                background-color: rgba(0, 0, 0, 1);
-                border-color: rgba(0, 0, 0, 1);
-            }
-            
-            .smallSplit {
-                width: 20vw;
-                margin-top: 5vw;
-                margin-left: auto;
-                margin-right: 0;
-                height: 0.3vw;
-                color: rgba(0, 0, 0, 1);
-                background-color: rgba(0, 0, 0, 1);
-            }
-            
-            .trioSplit {
-                position: relative;
-                width: 5vw;
-                margin-left: 0;
-                height: 0.1vw;
-                color: rgba(0, 0, 0, 1);
-                background-color: rgba(0, 0, 0, 1);
-            }
-            
-            #products {
-                perspective: 1024px;
-            }
-            
-            #foldBody {
-                position: static;
-                height: 100%;
-            }
-            
-            #textBody {
-                position: absolute;
-                left: 10vw;
-                top: 60vw;
-            }
-            
-            #textBody h1 {
-                margin-top: 15vw;
-                font-size: 4vw;
-            }
-            
-            .indent {
-                margin-left: 4vw;
-            }
-            
-            .unindent {
-                margin-left: -4vw;
-            }
-            
-            .inlineBlock {
-                display: inline-block;
-            }
-            
-            .trioBlock {
-                width: 20vw;
-                font-size: 2vw;
-                padding: 2vw;
-                margin-top: 4vw;
-                border-style: solid;
-                border-width: 0.3vw;
-                cursor: pointer;
-                transition: all 0.5s;
-            }
-            
-            .trioBlock:hover {
-                background-color: rgba(0, 0, 0, 0.15);
-                transition: all 0.5s;
-            }
-            
-            .trioBlock p.explanation {
-                font-size: 1.5vw;
-            }
-            
-            .absolute-grid {
-                position: relative;
-            }
-            
-            .thumbnail {
-                position: absolute;
-                top: 1vw;
-                right: 1vw;
-                width: 4vw;
-                border-style: solid;
-                border-width: 0.15vw;
-                border-color: rgba(0, 0, 0, 0.4);
-                margin-left: 1vw;
-            }
-            
-            .siteIcon {
-                width: 20vw;
-                border-style: solid;
-                border-width: 0.3vw;
-            }
-            
-            #spacerDiv {
-                height: 100%;
-            }
-            
-            #bottomDiv {
-                position: relative;
-                left: 0vw;
-                width: 5vw;
-                height: 5vw;
-                background-color: rgba(0, 0, 0, 1);
-            }
-            
-            #footer {
-                font-size: 1vw;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="siteBorder">
-            <img id="mainLogo" src="images/MainLogo1024.png" />
-            <span id="topNav"><a onclick="slideOnto('#services')">Services</a><a onclick="slideOnto('#products')">Products</a><a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a></span>
-            <span id="console"></span>
-            <hr id="midSplit" />
-            <div id="foldDiv"></div>
-            <div id="textBody">
-                <h1 id="services">//Consulting Services</h1>
-                <div class="unindent">
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Prototyping<hr class="trioSplit"><p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p></div></a>
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">R&D<hr class="trioSplit"><p class="explanation">Leverage our experience fulfilling multiple government-funded research projects.</p></div></a>
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><div class="trioBlock indent inlineBlock">Product Architecture<hr class="trioSplit"><p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p></div></a>
-                </div>
-                <hr class="smallSplit" />
-                <h1 id="products">//Products</h1>
-                <div class="unindent">
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                        <div class="trioBlock indent inlineBlock absolute-grid">
-                            Instance Kiosk<img class="thumbnail" src="images/Kiosk.png">
-                            <hr class="trioSplit">
-                            <p class="explanation">Kiosk solution offering easy web integrations and integrated on-screen keyboard</p>
-                        </div>
-                    </a>
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                        <div class="trioBlock indent inlineBlock absolute-grid">
-                            Instance Delivery<img class="thumbnail" src="images/Delivery.png">
-                            <hr class="trioSplit">
-                            <p class="explanation">Simple content delivery add-on for Instance products with added solutions for user re-engagement</p>
-                        </div>
-                    </a>
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                        <div class="trioBlock indent inlineBlock absolute-grid">
-                            Instance Photos<img class="thumbnail" src="images/Photos.png">
-                            <hr class="trioSplit">
-                            <p class="explanation">Event photo booth solution with novel strategies for frictionless UX and re-engagement</p>
-                        </div>
-                    </a>
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                        <div class="trioBlock indent inlineBlock absolute-grid">
-                            Instance Motion<img class="thumbnail" src="images/Motion.png">
-                            <hr class="trioSplit">
-                            <p class="explanation">Engaging visualization installation using body gestures</p>
-                        </div>
-                    </a>
-                    <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
-                        <div class="trioBlock indent inlineBlock absolute-grid">
-                            Instance Class<img class="thumbnail" src="images/Class.png">
-                            <hr class="trioSplit">
-                            <p class="explanation">Virtual reality suite for multimedia educational apps<br><br></p>
-                        </div>
-                    </a>
-                </div>
-                <hr class="smallSplit" />
-                <h1 id="clients">//Clients</h1>
-                <img src='images/AMT.png' alt='AMT' class='siteIcon'>
-                <img src='images/UMMS.png' alt='UMMS' class='siteIcon'>
-                <img src='images/TUFTS.png' alt='TUFTS' class='siteIcon'>
-                <img src='images/IGS.png' alt='IGS' class='siteIcon'>
-                <img src='images/SGID.png' alt='SGID' class='siteIcon'>
-                <img src='images/P75.png' alt='P75' class='siteIcon'>
-                <hr class="smallSplit" />
-                <h1 id="cases">//Case Studies</h1>
-                <div class="trioBlock"><p>Coming Soon.</p></div>
-                <hr class="smallSplit" />
-                <p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
-            </div>
-        </div>
-        <script>
-            var slideOnto = function(elementSelector) {
-                document.querySelector(elementSelector).scrollIntoView({
-                    block: "start",
-                    behavior: "smooth"
-                });
-            };
-        </script>
-    </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Instance Lab LLC</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<style>
+			html {
+				min-height: 100%;
+				position: relative;
+				margin: 0;
+				font-family: Roboto;
+				font-size: 3vw;
+			}
+
+			body {
+				height: 100%;
+				margin: 0;
+			}
+
+			a {
+				text-decoration: none;
+				color: rgba(0, 0, 0, 1);
+			}
+
+			#siteBorder {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				overflow: auto;
+				/*                z-index: -1;*/
+			}
+
+			#mainLogo {
+				position: absolute;
+				width: 18vw;
+				left: 8vw;
+				top: 10vw;
+			}
+
+			#topNav {
+				position: absolute;
+				right: 8vw;
+				top: 8vw;
+			}
+
+			#topNav a {
+				color: rgba(0, 0, 0, 1);
+				margin-left: 3vw;
+				padding: 0.5vw;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			#topNav a:hover {
+				background-color: rgba(0, 0, 0, 0.15);
+				transition: all 0.5s;
+			}
+
+			#topNav a:visited {
+				color: rgba(0, 0, 0, 1);
+			}
+
+			#console {
+				position: absolute;
+				font-size: 2vw;
+				top: 43vw;
+				left: 40vw;
+
+			}
+
+			#midSplit {
+				position: absolute;
+				width: 60vw;
+				right: 0vw;
+				top: 45vw;
+				height: 0.5vw;
+				color: rgba(0, 0, 0, 1);
+				background-color: rgba(0, 0, 0, 1);
+				border-color: rgba(0, 0, 0, 1);
+			}
+
+			.smallSplit {
+				width: 20vw;
+				margin-top: 5vw;
+				margin-left: auto;
+				margin-right: 0;
+				height: 0.3vw;
+				color: rgba(0, 0, 0, 1);
+				background-color: rgba(0, 0, 0, 1);
+			}
+
+			.trioSplit {
+				position: relative;
+				width: 5vw;
+				margin-left: 0;
+				height: 0.1vw;
+				color: rgba(0, 0, 0, 1);
+				background-color: rgba(0, 0, 0, 1);
+			}
+
+			#products {
+				perspective: 1024px;
+			}
+
+			#foldBody {
+				position: static;
+				height: 100%;
+			}
+
+			#textBody {
+				position: absolute;
+				left: 10vw;
+				top: 60vw;
+			}
+
+			#textBody h1 {
+				margin-top: 15vw;
+				font-size: 4vw;
+			}
+
+			.indent {
+				margin-left: 4vw;
+			}
+
+			.unindent {
+				margin-left: -4vw;
+			}
+
+			.inlineBlock {
+				display: inline-block;
+			}
+
+			.trioBlock {
+				width: 20vw;
+				font-size: 2vw;
+				padding: 2vw;
+				margin-top: 4vw;
+				border-style: solid;
+				border-width: 0.3vw;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+
+			.trioBlock:hover {
+				background-color: rgba(0, 0, 0, 0.15);
+				transition: all 0.5s;
+			}
+
+			.trioBlock p.explanation {
+				font-size: 1.5vw;
+			}
+			.trioBlock {
+				width: 20vw;
+				font-size: 2vw;
+				padding: 2vw;
+				margin-top: 4vw;
+				border-style: solid;
+				border-width: 0.3vw;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+
+			.trioBlock:hover {
+				background-color: rgba(0, 0, 0, 0.15);
+				transition: all 0.5s;
+			}
+
+			.trioBlock p.explanation {
+				font-size: 1.5vw;
+			}
+
+			.longBlock {
+				width: 20vw;
+				font-size: 2vw;
+				padding: 2vw;
+				margin-top: 4vw;
+				border-style: solid;
+				border-width: 0.3vw;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+
+			.longBlock:hover {
+				background-color: rgba(0, 0, 0, 0.15);
+				transition: all 0.5s;
+			}
+
+			.longBlock p.explanation {
+				font-size: 1.5vw;
+			}
+
+			.longBlock {
+				width: 80vw;
+				font-size: 2vw;
+				line-height: 1.5;
+				padding: 2vw;
+				margin-top: 4vw;
+				border-style: solid;
+				border-width: 0.3vw;
+				cursor: pointer;
+				transition: all 0.5s;
+			}
+
+			.longBlock:hover {
+				background-color: rgba(0, 0, 0, 0.15);
+				transition: all 0.5s;
+			}
+
+			.longBlock p.headline {
+				font-size: 2vw;
+			}
+
+			.longBlock p.explanation {
+				font-size: 1.5vw;
+			}
+
+			.absolute-grid {
+				position: relative;
+			}
+
+			.thumbnail {
+				position: absolute;
+				top: 1vw;
+				right: 1vw;
+				width: 4vw;
+				border-style: solid;
+				border-width: 0.15vw;
+				border-color: rgba(0, 0, 0, 0.4);
+				margin-left: 1vw;
+			}
+
+			.siteIcon {
+				width: 20vw;
+				border-style: solid;
+				border-width: 0.3vw;
+			}
+
+			#spacerDiv {
+				height: 100%;
+			}
+
+			#bottomDiv {
+				position: relative;
+				left: 0vw;
+				width: 5vw;
+				height: 5vw;
+				background-color: rgba(0, 0, 0, 1);
+			}
+
+			#footer {
+				font-size: 1vw;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="siteBorder">
+			<img id="mainLogo" src="images/MainLogo1024.png" />
+			<span id="topNav">
+				<a onclick="slideOnto('#services')">Services</a>
+				<a onclick="slideOnto('#products')">Products</a>
+				<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a>
+			</span>
+			<span id="console"></span>
+			<hr id="midSplit" />
+			<div id="foldDiv"></div>
+			<div id="textBody">
+				<h1 id="about">//About</h1>
+				<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+					<div class="longBlock inlineBlock">Instance Lab is a consultancy offering expertise on launching software products.
+						<hr class="trioSplit">
+						<p class="explanation">
+							We are experienced in developing new software products by designing, rapidly prototyping, and creating robust architecture. Our clients range from small businesses and startups to government funded projects and labs.
+						</p>
+						<p class="explanation">
+							We are experienced in working on a variety of products including: Mobile Apps, Web Apps, E-Commerce Websites, Virtual Reality Exhibits, Motion Interactive Installations, Bluetooth Wearable Systems, and Cloud Services.
+						</p>
+						<p class="explanation">
+								Click here to tell us about your project, and we will show you how we can help you reach your goals.
+						</p>
+					</div>
+				</a>
+				<hr class="smallSplit" />
+				<h1 id="services">//Consulting Services</h1>
+				<div class="unindent">
+					<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+						<div class="trioBlock indent inlineBlock">Prototyping
+							<hr class="trioSplit">
+							<p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product launch.</p>
+						</div>
+					</a>
+					<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+						<div class="trioBlock indent inlineBlock">R&D
+							<hr class="trioSplit">
+							<p class="explanation">Leverage our experience fulfilling multiple government-funded research projects.</p>
+						</div>
+					</a>
+					<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+						<div class="trioBlock indent inlineBlock">Product Architecture
+							<hr class="trioSplit">
+							<p class="explanation">We design user-friendly products using developer-friendly tools and packages.</p>
+						</div>
+					</a>
+				</div>
+				<hr class="smallSplit" />
+				<h1 id="clients">//Clients</h1>
+				<img src='images/AMT.png' alt='AMT' class='siteIcon'>
+				<img src='images/UMMS.png' alt='UMMS' class='siteIcon'>
+				<img src='images/TUFTS.png' alt='TUFTS' class='siteIcon'>
+				<img src='images/IGS.png' alt='IGS' class='siteIcon'>
+				<img src='images/SGID.png' alt='SGID' class='siteIcon'>
+				<img src='images/P75.png' alt='P75' class='siteIcon'>
+				<hr class="smallSplit" />
+				<h1 id="cases">//Case Studies</h1>
+				<div class="trioBlock">
+					<p>Coming Soon.</p>
+				</div>
+				<hr class="smallSplit" />
+				<p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
+			</div>
+		</div>
+		<script>
+			var slideOnto = function (elementSelector) {
+				document.querySelector(elementSelector).scrollIntoView({
+					block: "start",
+					behavior: "smooth"
+				});
+			};
+		</script>
+	</body>
 </html>
