@@ -11,6 +11,7 @@
 				margin: 0;
 				font-family: Roboto;
 				font-size: 3vw;
+				color: rgba(27, 27, 27, 1);
 			}
 
 			body {
@@ -20,7 +21,7 @@
 
 			a {
 				text-decoration: none;
-				color: rgba(0, 0, 0, 1);
+				color: rgba(27, 27, 27, 1);
 			}
 
 			#siteBorder {
@@ -47,20 +48,33 @@
 			}
 
 			#topNav a {
-				color: rgba(0, 0, 0, 1);
-				margin-left: 3vw;
-				padding: 0.5vw;
+				color: rgba(27, 27, 27, 1);
+				margin-left: 2.5vw;
+				padding: 1vw;
 				text-decoration: none;
 				cursor: pointer;
+				transition: all 0.75s;
 			}
 
-			#topNav a:hover {
+			/* #topNav a:hover {
 				background-color: rgba(0, 0, 0, 0.15);
-				transition: all 0.5s;
+				transition: all 0.75s;
+			} */
+
+			#topNav a:hover {
+				background-color: rgba(27, 27, 27, 1);
+				color: rgba(255, 255, 255, 1);
+				transition: all 0.75s;
 			}
 
 			#topNav a:visited {
-				color: rgba(0, 0, 0, 1);
+				color: rgba(27, 27, 27, 1);
+			}
+
+			#topNav a:visited:hover {
+				background-color: rgba(27, 27, 27, 1);
+				color: rgba(255, 255, 255, 1);
+				transition: all 0.75s;
 			}
 
 			#console {
@@ -77,9 +91,9 @@
 				right: 0vw;
 				top: 45vw;
 				height: 0.5vw;
-				color: rgba(0, 0, 0, 1);
-				background-color: rgba(0, 0, 0, 1);
-				border-color: rgba(0, 0, 0, 1);
+				color: rgba(27, 27, 27, 1);
+				background-color: rgba(27, 27, 27, 1);
+				border-color: rgba(27, 27, 27, 1);
 			}
 
 			.smallSplit {
@@ -88,8 +102,8 @@
 				margin-left: auto;
 				margin-right: 0;
 				height: 0.3vw;
-				color: rgba(0, 0, 0, 1);
-				background-color: rgba(0, 0, 0, 1);
+				color: rgba(27, 27, 27, 1);
+				background-color: rgba(27, 27, 27, 1);
 			}
 
 			.trioSplit {
@@ -97,8 +111,8 @@
 				width: 5vw;
 				margin-left: 0;
 				height: 0.1vw;
-				color: rgba(0, 0, 0, 1);
-				background-color: rgba(0, 0, 0, 1);
+				color: rgba(27, 27, 27, 1);
+				background-color: rgba(27, 27, 27, 1);
 			}
 
 			#products {
@@ -141,31 +155,32 @@
 				border-style: solid;
 				border-width: 0.3vw;
 				cursor: pointer;
-				transition: all 0.5s;
+				transition: all 0.75s;
 			}
 
-			.trioBlock:hover {
+			/* .trioBlock:hover {
 				background-color: rgba(0, 0, 0, 0.15);
-				transition: all 0.5s;
+				transition: all 0.75s;
+			} */
+
+			.trioBlock:hover {
+				background-color: rgba(27, 27, 27, 1);
+				color: rgba(255, 255, 255, 1);
+				transition: all 0.75s;
+			}
+
+			.trioBlock hr {
+				transition: all 0.75s;
+			}
+
+			.trioBlock:hover hr {
+				border-color: rgba(255, 255, 255, 1);
+				background-color: rgba(255, 255, 255, 1);
+				transition: all 0.75s;
 			}
 
 			.trioBlock p.explanation {
 				font-size: 1.5vw;
-			}
-			.trioBlock {
-				width: 20vw;
-				font-size: 2vw;
-				padding: 2vw;
-				margin-top: 4vw;
-				border-style: solid;
-				border-width: 0.3vw;
-				cursor: pointer;
-				transition: all 0.5s;
-			}
-
-			.trioBlock:hover {
-				background-color: rgba(0, 0, 0, 0.15);
-				transition: all 0.5s;
 			}
 
 			.trioBlock p.explanation {
@@ -181,12 +196,13 @@
 				border-style: solid;
 				border-width: 0.3vw;
 				cursor: pointer;
-				transition: all 0.5s;
+				transition: all 0.75s;
 			}
 
 			.longBlock:hover {
-				background-color: rgba(0, 0, 0, 0.15);
-				transition: all 0.5s;
+				background-color: rgba(27, 27, 27, 1);
+				color: rgba(255, 255, 255, 1);
+				transition: all 0.75s;
 			}
 
 			.longBlock p.headline {
@@ -200,6 +216,32 @@
 			.longBlock ul.trioList {
 				width: 35vw;
 				list-style-type: none;
+			}
+
+			.longBlock ul.trioList li {
+				background-color: rgba(27, 27, 27, 1);
+				color: rgba(255, 255, 255, 1);
+				margin: 1vh 1vw 1vh 1vw;
+				padding: 1vw 1vw 1vh 1vw;
+				transition: all 0.75s;
+			}
+
+			.longBlock:hover ul.trioList li {
+				color: rgba(27, 27, 27, 1);
+				background-color: rgba(255, 255, 255, 1);
+				margin: 1vh 1vw 1vh 1vw;
+				padding: 1vw 1vw 1vh 1vw;
+				transition: all 0.75s;
+			}
+
+			.longBlock hr {
+				transition: all 0.75s;
+			}
+
+			.longBlock:hover hr {
+				border-color: rgba(255, 255, 255, 1);
+				background-color: rgba(255, 255, 255, 1);
+				transition: all 0.75s;
 			}
 
 			.absolute-grid {
@@ -232,7 +274,7 @@
 				left: 0vw;
 				width: 5vw;
 				height: 5vw;
-				background-color: rgba(0, 0, 0, 1);
+				background-color: rgba(27, 27, 27, 1);
 			}
 
 			#footer {
