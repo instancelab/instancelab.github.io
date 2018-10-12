@@ -24,6 +24,10 @@
 				color: rgba(27, 27, 27, 1);
 			}
 
+			.linkPointer {
+				cursor: pointer;
+			}
+
 			#siteBorder {
 				position: absolute;
 				top: 0;
@@ -195,7 +199,10 @@
 				margin-top: 4vw;
 				border-style: solid;
 				border-width: 0.3vw;
-				cursor: pointer;
+				transition: all 0.75s;
+			}
+
+			.longBlock a {
 				transition: all 0.75s;
 			}
 
@@ -205,6 +212,10 @@
 				transition: all 0.75s;
 			}
 
+			.longBlock:hover a {
+				color: rgba(255, 255, 255, 1);
+				transition: all 0.75s;
+			}
 			.longBlock p.headline {
 				font-size: 2vw;
 			}
@@ -227,6 +238,22 @@
 			}
 
 			.longBlock:hover ul.trioList li {
+				color: rgba(27, 27, 27, 1);
+				background-color: rgba(255, 255, 255, 1);
+				margin: 1vh 1vw 1vh 1vw;
+				padding: 1vw 1vw 1vh 1vw;
+				transition: all 0.75s;
+			}
+
+			.longBlock ul.trioList a {
+				background-color: rgba(27, 27, 27, 1);
+				color: rgba(255, 255, 255, 1);
+				margin: 1vh 1vw 1vh 1vw;
+				padding: 1vw 1vw 1vh 1vw;
+				transition: all 0.75s;
+			}
+
+			.longBlock:hover ul.trioList a {
 				color: rgba(27, 27, 27, 1);
 				background-color: rgba(255, 255, 255, 1);
 				margin: 1vh 1vw 1vh 1vw;
@@ -265,6 +292,15 @@
 				border-width: 0.3vw;
 			}
 
+			.solutionIcon {
+				vertical-align: text-top;
+				margin-right: 2vw;
+				width: 6vw;
+				border-style: solid;
+				border-width: 0.2vw;
+				background-color: rgba(255, 255, 255, 1);
+			}
+
 			#spacerDiv {
 				height: 100%;
 			}
@@ -288,7 +324,7 @@
 			<img id="mainLogo" src="images/MainLogo1024.png" />
 			<span id="topNav">
 				<a onclick="slideOnto('#services')">Services</a>
-				<a onclick="slideOnto('#products')">Products</a>
+				<a onclick="slideOnto('#solutions')">Solutions</a>
 				<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a>
 			</span>
 			<span id="console"></span>
@@ -356,6 +392,35 @@
 				<h1 id="cases">//Case Studies</h1>
 				<div class="trioBlock">
 					<p>Coming Soon.</p>
+				</div>
+				<h1 id="solutions">//Solutions</h1>
+				<div class="longBlock inlineBlock">Here are some solutions trusted by Instance Labs.
+					<hr class="trioSplit">
+					<p class="explanation">
+						If you are unsure which solutions you need, and how they can benefit your goals, <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">contact us</a> with a brief description of your company, project, and your goals. We will be able to curate a set of packaged and/or custom solutions right for you.
+					</p>
+					<p class="explanation">
+						If you need some recommendations right away, here are some solutions we recommend frequently:
+						<ul class="trioList inlineBlock">
+							<li>//E-Commerce
+								<a href="https://www.shopify.com/?ref=valuace-llc&utm_source=web" target="_blank">
+									<p><img src='images/SHOPIFY.png' alt='Shopify' class='solutionIcon'>Shopify</p>
+								</a>
+							</li>
+							<!-- <li>//Web Apps</li>
+							<li>//E-Commerce Websites</li>
+							<li>//Business Process Automation</li> -->
+						</ul>
+						<ul class="trioList inlineBlock">
+							<!-- <li>//Virtual Reality Exhibits</li>
+							<li>//Motion Interactive Installations</li>
+							<li>//Bluetooth Wearable Systems</li>
+							<li>//Cloud Services</li> -->
+						</ul>
+					</p>
+					<p class="explanation">
+							If you are in search for something you don't see above, it is most likely that the available solutions are not one-size-fits-all. Feel free to <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">contact us</a>, and we will be more than happy to explore appropriate options with you.
+					</p>
 				</div>
 				<hr class="smallSplit" />
 				<p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
