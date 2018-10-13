@@ -28,6 +28,10 @@
 				cursor: pointer;
 			}
 
+			.flatBottom {
+				margin-bottom: 0;
+			}
+
 			#siteBorder {
 				position: absolute;
 				top: 0;
@@ -233,7 +237,7 @@
 				background-color: rgba(27, 27, 27, 1);
 				color: rgba(255, 255, 255, 1);
 				margin: 1vh 1vw 1vh 1vw;
-				padding: 1vw 1vw 1vh 1vw;
+				padding: 1vh 1vw 1vh 1vw;
 				transition: all 0.75s;
 			}
 
@@ -241,7 +245,7 @@
 				color: rgba(27, 27, 27, 1);
 				background-color: rgba(255, 255, 255, 1);
 				margin: 1vh 1vw 1vh 1vw;
-				padding: 1vw 1vw 1vh 1vw;
+				padding: 1vh 1vw 1vh 1vw;
 				transition: all 0.75s;
 			}
 
@@ -249,7 +253,7 @@
 				background-color: rgba(27, 27, 27, 1);
 				color: rgba(255, 255, 255, 1);
 				margin: 1vh 1vw 1vh 1vw;
-				padding: 1vw 1vw 1vh 1vw;
+				padding: 1vh 1vw 1vh 1vw;
 				transition: all 0.75s;
 			}
 
@@ -257,8 +261,14 @@
 				color: rgba(27, 27, 27, 1);
 				background-color: rgba(255, 255, 255, 1);
 				margin: 1vh 1vw 1vh 1vw;
-				padding: 1vw 1vw 1vh 1vw;
+				padding: 1vh 1vw 1vh 1vw;
 				transition: all 0.75s;
+			}
+
+			.longBlock ul.trioList a.solutionLink {
+				display: inline-block;
+				margin: 0;
+				padding: 0;
 			}
 
 			.longBlock hr {
@@ -299,6 +309,17 @@
 				border-style: solid;
 				border-width: 0.2vw;
 				background-color: rgba(255, 255, 255, 1);
+			}
+
+			.explanation.solutionBlock {
+				margin-bottom: 0;
+			}
+
+			.explanation.solutionBlock ul,
+			.explanation.solutionBlock li,
+			.explanation.solutionblock p,
+			.explanation.solutionblock a {
+				margin-bottom: 0;
 			}
 
 			#spacerDiv {
@@ -399,12 +420,13 @@
 					<p class="explanation">
 						If you are unsure which solutions you need, and how they can benefit your goals, <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">contact us</a> with a brief description of your company, project, and your goals. We will be able to curate a set of packaged and/or custom solutions right for you.
 					</p>
-					<p class="explanation">
-						If you need some recommendations right away, here are some solutions we recommend frequently:
+					<p class="explanation solutionBlock">
+						If you need some recommendations right away, below are some solutions we recommend frequently. Some of these may be an affiliate link:
 						<ul class="trioList inlineBlock">
 							<li>//E-Commerce
-								<a href="https://www.shopify.com/?ref=valuace-llc&utm_source=web" target="_blank">
+								<a class= "solutionLink" href="https://www.shopify.com/?ref=valuace-llc&utm_source=web" target="_blank">
 									<p><img src='images/SHOPIFY.png' alt='Shopify' class='solutionIcon'>Shopify</p>
+									<p class="explanation">It is very easy to setup an E-Commerce shop on Shopify, and the unparalleled selection of add-ons will allow you to improve and customize your store as it grows.<br /><br /></p>
 								</a>
 							</li>
 							<!-- <li>//Web Apps</li>
@@ -412,8 +434,13 @@
 							<li>//Business Process Automation</li> -->
 						</ul>
 						<ul class="trioList inlineBlock">
-							<!-- <li>//Virtual Reality Exhibits</li>
-							<li>//Motion Interactive Installations</li>
+								<li>//VPN
+										<a class = "solutionLink" href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=2495&aff_sub={BATCHEVENTID}&url_id=263" target="_blank">
+											<p><img src='images/NORDVPN.png' alt='NordVPN' class='solutionIcon'>NordVPN</p>
+											<p class="explanation">There are hundreds of options for VPNs, each with its pros/cons. NordVPN is a good general recommendation for a secure VPN service. Contact us if you would like to explore more options in detail.</p>
+										</a>
+									</li>
+							<!-- <li>//Motion Interactive Installations</li>
 							<li>//Bluetooth Wearable Systems</li>
 							<li>//Cloud Services</li> -->
 						</ul>
