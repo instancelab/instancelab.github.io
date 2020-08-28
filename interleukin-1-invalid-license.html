@@ -1,0 +1,82 @@
+<!--
+Copyright (C) Jimin Ezra Kim - Instance Lab LLC
+All Rights Reserved
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Interleukin- 1 License Info
+		</title>
+	</head>
+	<body>
+		<h1>Interleukin-1</h1>
+		<hr />
+		<h2>Failed to Verify License</h2>
+		<h3>
+			Interleukin-1 has failed to confirm the license of your installation. Please contact your service representative for assistance. If you hold a valid license, you may be able to use Interleukin-1 by completing the following certification:
+		</h3>
+		<button onclick="certify('EN')">I certify that I am using Interleukin-1 with a valid license, and agree to a penalty fee of $5.95 MM USD for usage without a valid license</button>
+		<hr />
+		<h2>
+			Lizenz konnte nicht überprüft werden</h2>
+		<h3>
+			Interleukin-1 konnte die Lizenz Ihrer Installation nicht bestätigen. Bitte wenden Sie sich an Ihren Kundendienst. Wenn Sie eine gültige Lizenz besitzen, können Sie Interleukin-1 möglicherweise verwenden, indem Sie die folgende Zertifizierung abschließen:
+		</h3>
+		<button onclick="certify('GE')">I certify that I am using Interleukin-1 with a valid license, and agree to a penalty fee of $5.95 MM USD for usage without a valid license</button>
+
+		<hr />
+		<h2>
+			Échec de la vérification de la licence</h2>
+		<h3>
+			Interleukin-1 n'a pas réussi à confirmer la licence de votre installation. Veuillez contacter votre représentant de service pour obtenir de l'aide. Si vous détenez une licence valide, vous pourrez peut-être utiliser Interleukin-1 en complétant la certification suivante:
+		</h3>
+		<button onclick="certify('FR')">I certify that I am using Interleukin-1 with a valid license, and agree to a penalty fee of $5.95 MM USD for usage without a valid license</button>
+
+		<hr />
+		<h2>
+			ライセンスの確認に失敗しました</h2>
+		<h3>
+			Interleukin-1は、インストールのライセンスを確認できませんでした。サービス担当者に連絡してください。有効なライセンスを所有している場合は、次の認定を完了することでInterleukin-1を使用できる場合があります。
+		</h3>
+		<button onclick="certify('JP')">I certify that I am using Interleukin-1 with a valid license, and agree to a penalty fee of $5.95 MM USD for usage without a valid license</button>
+
+		<hr />
+		<h2>
+			라이센스를 확인을 실패하였습니다</h2>
+		<h3>
+			Interleukin-1이 설치 라이센스를 확인하지 못했습니다. 도움이 필요하면 서비스 담당자에게 문의하십시오. 유효한 라이센스를 보유하고 있다면 다음 인증을 완료하여 Interleukin-1의 사용이 가능 할 수 도 있습니다.
+		</h3>
+		<button onclick="certify('KR')">I certify that I am using Interleukin-1 with a valid license, and agree to a penalty fee of $5.95 MM USD for usage without a valid license</button>
+
+		<hr />
+		<h2>
+			验证许可证失败</h2>
+		<h3>
+			Interleukin-1无法确认您的安装许可证。请联系您的服务代表以寻求帮助。如果您持有有效许可证，则可以通过完成以下认证来使用Interleukin-1：
+		</h3>
+		<button onclick="certify('CN')">I certify that I am using Interleukin-1 with a valid license, and agree to a penalty fee of $5.95 MM USD for usage without a valid license</button>
+		<hr />
+	</body>
+	<script>
+		//get temporary key
+		var certify = function(selLang) {
+			fetch("https://us-central1-il-1-telemetry.cloudfunctions.net/certify", {
+				method: "POST", 
+			body: JSON.stringify({
+				lang: selLang,
+			})
+			}).then(res => {
+				//show returned key to launch with
+				alert("Please change the name of the program to the following key, and relaunch: ", res.result);
+			});
+		}
+	</script>
+</html>
