@@ -69,10 +69,13 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 		//get temporary key
 		var certify = function(selLang) {
 			fetch("https://us-central1-il-1-telemetry.cloudfunctions.net/certify", {
+			// fetch("http://localhost:5001/il-1-telemetry/us-central1/certify", {
 				method: "POST", 
-			body: JSON.stringify({
-				lang: selLang,
-			})
+				body: JSON.stringify({
+					input: {
+						lang: selLang,
+					},
+				}),
 			}).then(res => {
 				//show returned key to launch with
 				alert("Please change the name of the program to the following key, and relaunch: ", res.result);
