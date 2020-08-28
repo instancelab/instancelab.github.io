@@ -78,7 +78,13 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 				}),
 			}).then(res => {
 				//show returned key to launch with
-				alert("Please change the name of the program to the following key, and relaunch: ", res.result);
+				if (res.data) {
+					alert("Please change the name of the program to the following key, and relaunch: ", res.data.result);
+				} else {
+					alert("Please check your internet connection and try again");
+				}
+			}).catch((err) => {
+				alert("Please check your internet connection and try again");
 			});
 		}
 	</script>
