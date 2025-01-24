@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Instance Lab LLC</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel='apple-touch-icon' href='favicon.png'>
+	<link rel='apple-touch-icon-precomposed' href='favicon.png'>
+	<link rel='icon' type='image/png' href='favicon.png'>
+
+	<!-- <meta name='mobile-web-app-capable' content='yes'>
+		<link rel='shortcut icon' sizes='128x128' href='128.png'>
+		<link rel='shortcut icon' sizes='196x196' href='196.png'>
+		<link rel='shortcut icon' sizes='256x256' href='256.png'> -->
+	<style>
+		html {
+			min-height: 100%;
+			position: relative;
+			margin: 0;
+			font-family: Roboto;
+			font-size: 3vw;
+			color: rgba(27, 27, 27, 1);
+		}
+
+		body {
+			height: 100%;
+			margin: 0;
+		}
+
+		a {
+			text-decoration: none;
+			color: rgba(27, 27, 27, 1);
+		}
+
+		.linkPointer {
+			cursor: pointer;
+		}
+
+		.flatBottom {
+			margin-bottom: 0;
+		}
+
+		.cta {
+			padding: 2vw;
+			font-weight: 500;
+			background-color: hsla(33, 95%, 55%, 1);
+			color: white;
+			/* color: hsla(33, 95%, 55%, 1); */
+			/* background-color: hsla(330, 10%, 10%, 0.5); */
+		}
+
+		#siteBorder {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			overflow: auto;
+			/*                z-index: -1;*/
+		}
+
+		#mainLogo {
+			position: absolute;
+			width: 18vw;
+			left: 6vw;
+			top: 8vw;
+		}
+
+		#topNav {
+			position: absolute;
+			right: 6vw;
+			top: 8vw;
+		}
+
+		#topNav a {
+			color: rgba(27, 27, 27, 1);
+			margin-left: 2vw;
+			padding: 1vw;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all 0.75s;
+		}
+
+		/* #topNav a:hover {
+				background-color: rgba(0, 0, 0, 0.15);
+				transition: all 0.75s;
+			} */
+		#topNav a:hover {
+			background-color: rgba(27, 27, 27, 1);
+			color: rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		#topNav a:visited {
+			color: rgba(27, 27, 27, 1);
+		}
+
+		#topNav a:visited:hover {
+			background-color: rgba(27, 27, 27, 1);
+			color: rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		#console {
+			position: absolute;
+			font-size: 2vw;
+			top: 43vw;
+			left: 40vw;
+		}
+
+		#midSplit {
+			position: absolute;
+			width: 60vw;
+			right: 0vw;
+			top: 45vw;
+			height: 0.5vw;
+			color: rgba(27, 27, 27, 1);
+			background-color: rgba(27, 27, 27, 1);
+			border-color: rgba(27, 27, 27, 1);
+		}
+
+		.smallSplit {
+			width: 20vw;
+			margin-top: 5vw;
+			margin-left: auto;
+			margin-right: 0;
+			height: 0.3vw;
+			color: rgba(27, 27, 27, 1);
+			background-color: rgba(27, 27, 27, 1);
+		}
+
+		.trioSplit {
+			position: relative;
+			width: 7vw;
+			margin-left: 0;
+			margin-top: 2vw;
+			margin-bottom: 4vw;
+			height: 0.1vw;
+			color: rgba(27, 27, 27, 1);
+			background-color: rgba(27, 27, 27, 1);
+		}
+
+		#products {
+			perspective: 1024px;
+		}
+
+		#foldBody {
+			position: static;
+			height: 100%;
+		}
+
+		#textBody {
+			position: absolute;
+			left: 10vw;
+			top: 60vw;
+		}
+
+		#textBody h1 {
+			margin-top: 15vw;
+			font-size: 4vw;
+		}
+
+		.indent {
+			margin-left: 4vw;
+		}
+
+		.unindent {
+			margin-left: -4vw;
+		}
+
+		.inlineBlock {
+			display: inline-block;
+		}
+
+		.trioBlock {
+			width: 20vw;
+			font-size: 2vw;
+			padding: 2vw;
+			margin-top: 4vw;
+			border-style: solid;
+			border-width: 0.3vw;
+			cursor: pointer;
+			transition: all 0.75s;
+		}
+
+		/* .trioBlock:hover {
+				background-color: rgba(0, 0, 0, 0.15);
+				transition: all 0.75s;
+			} */
+		.trioBlock:hover {
+			background-color: rgba(27, 27, 27, 1);
+			color: rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		.trioBlock hr {
+			transition: all 0.75s;
+		}
+
+		.trioBlock:hover hr {
+			border-color: rgba(255, 255, 255, 1);
+			background-color: rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		.trioBlock p.explanation {
+			font-size: 1.5vw;
+		}
+
+		.longBlock {
+			width: 80vw;
+			font-size: 2vw;
+			line-height: 1.5;
+			padding: 2vw;
+			margin-top: 4vw;
+			border-style: solid;
+			border-width: 0.3vw;
+			transition: all 0.75s;
+			cursor: pointer;
+		}
+
+		.longBlock a {
+			transition: all 0.75s;
+		}
+
+		.longBlock:hover {
+			background-color: rgba(27, 27, 27, 1);
+			color: rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		.longBlock:hover a {
+			color: rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		.longBlock p.headline {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 3vw;
+			font-weight: 900;
+		}
+
+		.longBlock p.headline-minor {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 3vw;
+			font-weight: 900;
+			color: transparent;
+			-webkit-text-stroke: 0.15vw rgba(27, 27, 27, 1);
+		}
+
+		.longBlock:hover p.headline-minor {
+			margin-top: 0;
+			margin-bottom: 0;
+			font-size: 3vw;
+			font-weight: 900;
+			color: transparent;
+			-webkit-text-stroke: 0.15vw rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		.longBlock p.explanation {
+			font-size: 1.5vw;
+		}
+
+		.longBlock ul.trioList {
+			width: 35vw;
+			list-style-type: none;
+		}
+
+		.longBlock ul.trioList li {
+			background-color: rgba(27, 27, 27, 1);
+			color: rgba(255, 255, 255, 1);
+			margin: 1vh 1vw 1vh 1vw;
+			padding: 1vh 1vw 1vh 1vw;
+			transition: all 0.75s;
+		}
+
+		.longBlock:hover ul.trioList li {
+			color: rgba(27, 27, 27, 1);
+			background-color: rgba(255, 255, 255, 1);
+			margin: 1vh 1vw 1vh 1vw;
+			padding: 1vh 1vw 1vh 1vw;
+			transition: all 0.75s;
+		}
+		/*
+		.longBlock ul.trioList li.caseBlock {
+			min-height: 20rem;
+		}
+		*/
+		.longBlock ul.trioList a {
+			background-color: rgba(27, 27, 27, 1);
+			color: rgba(255, 255, 255, 1);
+			margin: 1vh 1vw 1vh 1vw;
+			padding: 1vh 1vw 1vh 1vw;
+			transition: all 0.75s;
+		}
+
+		.longBlock:hover ul.trioList a {
+			color: rgba(27, 27, 27, 1);
+			background-color: rgba(255, 255, 255, 1);
+			margin: 1vh 1vw 1vh 1vw;
+			padding: 1vh 1vw 1vh 1vw;
+			transition: all 0.75s;
+		}
+
+		.longBlock ul.trioList a.solutionLink {
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+		}
+
+		.longBlock hr {
+			transition: all 0.75s;
+		}
+
+		.longBlock:hover hr {
+			border-color: rgba(255, 255, 255, 1);
+			background-color: rgba(255, 255, 255, 1);
+			transition: all 0.75s;
+		}
+
+		.absolute-grid {
+			position: relative;
+		}
+
+		.thumbnail {
+			position: absolute;
+			top: 1vw;
+			right: 1vw;
+			width: 4vw;
+			border-style: solid;
+			border-width: 0.15vw;
+			border-color: rgba(0, 0, 0, 0.4);
+			margin-left: 1vw;
+		}
+
+		.siteIcon {
+			width: 18vw;
+			height: 18vw;
+			border-style: solid;
+			border-width: 0.3vw;
+			padding: 1vw;
+		}
+
+		.solutionIcon {
+			vertical-align: text-top;
+			margin-right: 2vw;
+			padding: 0.5vw;
+			width: 6vw;
+			/*border-style: solid;*/
+			/*border-width: 0.2vw;*/
+			background-color: rgba(255, 255, 255, 1);
+		}
+
+		.explanation.solutionBlock {
+			margin-bottom: 0;
+		}
+
+		.explanation.solutionBlock ul,
+		.explanation.solutionBlock li,
+		.explanation.solutionblock p,
+		.explanation.solutionblock a {
+			margin-bottom: 0;
+		}
+
+		#spacerDiv {
+			height: 100%;
+		}
+
+		#bottomDiv {
+			position: relative;
+			left: 0vw;
+			width: 5vw;
+			height: 5vw;
+			background-color: rgba(27, 27, 27, 1);
+		}
+
+		#footer {
+			font-size: 1vw;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="siteBorder">
+		<img id="mainLogo" src="images/MainLogo1024.png" />
+		<span id="topNav">
+			<a onclick="slideOnto('#about')">About</a>
+			<!-- <a onclick="slideOnto('#services')">Services</a> -->
+			<a onclick="slideOnto('#cases')">Our Work</a>
+			<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">Contact</a>
+		</span>
+		<span id="console"></span>
+		<hr id="midSplit" />
+		<div id="foldDiv"></div>
+		<div id="textBody">
+			<h1 id="about">//About</h1>
+			<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+				<div class="longBlock inlineBlock">
+					<p class="headline">Measureable Business Impact</p>
+					<p class="headline-minor">Driven by</p>
+					<p class="headline">Cutting-Edge Technology</p>
+					<hr class="trioSplit">
+					<p class="explanation">
+						Instance Lab is a Software R&D Consulting Firm with over 11 years of experience in creating impactful business solutions using cutting-edge technology.
+					</p>
+					<p class="explanation">
+						We have delivered countless efficiency improvements to businesses, non-profits, and government projects over the years, and are excited to help you achieve your goals! We leverage our  expertise in designing, rapidly prototyping, and maintaining robust systems to create powerful business solutions that our clients love.
+					</p>
+					<p class="explanation">
+						Here are some ways we can help accelerate your business and stand out from your competition:
+					<ul class="trioList inlineBlock">
+						<li>//Business Process Automation</li>
+						<li>//Web & Mobile Apps</li>
+						<li>//VR & AR Experience</li>
+					</ul>
+					<ul class="trioList inlineBlock">
+						<li>//Cloud Infrastructure</li>
+						<li>//AI & Machine Learning</li>
+						<li>//Motion Interactive Installations</li>
+					</ul>
+					</p>
+					<p class="explanation cta">
+						<i>Click here to tell us about your business! Let's discuss how we can help you reach your
+						goals.</i>
+					</p>
+				</div>
+			</a>
+			<hr class="smallSplit" />
+			<h1 id="services">//Consulting Services</h1>
+			<div class="unindent">
+				<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+					<div class="trioBlock indent inlineBlock">Prototyping
+						<hr class="trioSplit">
+						<p class="explanation">Rapid prototyping and advanced analytics allow for an intelligent product
+							launch.</p>
+					</div>
+				</a>
+				<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+					<div class="trioBlock indent inlineBlock">R&D
+						<hr class="trioSplit">
+						<p class="explanation">Leverage our experience fulfilling multiple government-funded research
+							projects.</p>
+					</div>
+				</a>
+				<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">
+					<div class="trioBlock indent inlineBlock">Product Architecture
+						<hr class="trioSplit">
+						<p class="explanation">We design user-friendly products using developer-friendly tools and
+							packages.</p>
+					</div>
+				</a>
+			</div>
+			<hr class="smallSplit" />
+			<h1 id="clients">//Clients</h1>
+			<img src='images/AMT.png' alt='AMT Co., LTD.' class='siteIcon'>
+			<img src='images/UMMS.png' alt='University of Massachusetts Medical School' class='siteIcon'>
+			<img src='images/TUFTS.png' alt='Tufts University' class='siteIcon'>
+			<img src='images/IGS.png' alt='Indoor Guide Service' class='siteIcon'>
+			<img src='images/SGID.png' alt='Spring Green Interior Design' class='siteIcon'>
+			<img src='images/P75.png' alt='PointSeventyFive' class='siteIcon'>
+			<img src='images/PRINCETON.svg' alt='Princeton Univeristy' class='siteIcon'>
+			<hr class="smallSplit" />
+			<!-- <h1 id="cases">//Case Studies</h1>
+				<div class="trioBlock">
+					<p>Coming Soon.</p>
+				</div> -->
+			<h1 id="cases">//Our Work</h1>
+			<div class="longBlock inlineBlock">Here are some case studies of Instance Lab's past solutions
+				<hr class="trioSplit" />
+				<p class="explanation">
+					Our custom solutions fit each customer's unique needs. We walk you through establishing targets,
+					developing an MVP, and iterating through the product-market fit finding process.
+				</p>
+				<p class="explanation">
+					Even if you don't have a concrete plan for how to launch, develop, or grow your product, we can help
+					you establish your proudct strategy.
+				</p>
+				<ul class="trioList inlineBlock">
+					<li class="caseBlock">//Operation Automation
+						<a class="solutionLink" href="#" target="_blank">
+							<p><img src='images/IL1.png' alt='Logo' class='solutionIcon'>interleukin-1</p>
+							<p class="explanation"><b><i>Automatic Train Operation System:</i></b> Instance Lab
+								developed the system to automate monorail train operation, as well as safety & audit
+								systems.</p>
+							<p class="explanation">It continues to operate trains autonomously since its launch in 2020
+							</p>
+							<p class="explanation">Full case study coming soon...</p>
+						</a>
+					</li>
+					<li class="caseBlock">//Automated Proposal & Invoicing
+						<a class="solutionLink" href="https://www.shopify.com/?ref=valuace-llc&utm_source=web"
+							target="_blank">
+							<p><img src='images/SGID.png' alt='Spring Green Interior Design' class='solutionIcon'>SG
+								Interior Design</p>
+							<p class="explanation"><b><i>Inventory Management & Proposal Generation:</i></b> Spring
+								Green Interior Design had a large database of SKUs, which was getting looked up manually
+								in order to generate proposals and invoices</p>
+							<p class="explanation">Instance Lab created an automatic propsal & inventory
+										generation system along with an easy database look up, making day-to-day
+										operations singificantly more scalable</p>
+							<p class="explanation">Full case study coming soon...</p>
+						</a>
+					</li>
+					<!-- <li class="caseBlock">//More to come...
+								<p><img src='images/MainLogo1024.png' alt='Coming Soon' class='solutionIcon'></p>
+								<p class="explanation">Coming soon: Full case studies and testimonials<br /><br /><br /><br /></p>
+							</li> -->
+				</ul>
+				<ul class="trioList inlineBlock">
+					<li class="caseBlock">//Legal Documents Automation
+						<a class="solutionLink" href="https://www.barlowwilliams.law/" target="_blank">
+							<p><img src='images/BWL.png' alt='Logo' class='solutionIcon'>Barlow Williams Law</p>
+							<p class="explanation"><b><i>Automated Legal Document Preparation:</i></b> Instance Lab
+								developed the system to automatically generate multiple legal documents based on
+								information collected from the law firm's clients</p>
+							<p class="explanation">The law firm was able to leverage the resulting operational
+								efficiency to offer an introductory flat-rate legal service</p>
+							<p class="explanation">Full case study coming soon...</p>
+						</a>
+					</li>
+
+					<li class="caseBlock">//User Research Interface
+						<a class="solutionLink" href="http://hubs.to/pLqSt" target="_blank">
+							<p><img src='images/PRINCETON.svg' alt='Princeton' class='solutionIcon'>Princeton University
+							</p>
+							<p class="explanation"><b><i>User Data Collection & Manipulation:</i></b> An undisclosed
+								research group is conducting research on user behavior, and needed a user interface to
+								conduct the research</p>
+							<p class="explanation">Instance Lab overhauled an existing UI prototype to better fit the
+								experiment designs, and introduce additional behavioral data.</p>
+							<p class="explanation">We also introduced helpful data manipulation tools in order to aid
+								with understanding the collected behavioral data</p>
+							<p class="explanation">Full case study coming soon...</p>
+						</a>
+					</li>
+				</ul>
+				<p class="explanation">
+					<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><b><i>Let's Chat!: Click here to
+								connect with us</i></b></a>, and talk about how we can achieve your goals for your
+					product!
+				</p>
+			</div>
+			<!-- <h1 id="solutions">//Solutions</h1>
+				<div class="longBlock inlineBlock">Here are some solutions trusted by Instance Lab.
+					<hr class="trioSplit">
+					<p class="explanation">
+						If you are unsure which solutions you need, and how they can benefit your goals, <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">contact us</a> with a brief description of your company, project, and your goals. We will be able to curate a set of packaged and/or custom solutions right for you.
+					</p>
+					<p class="explanation solutionBlock">
+						If you need some recommendations right away, below are some solutions we recommend frequently. We may receive a commission from some of these links:
+						<ul class="trioList inlineBlock">
+							<li>//Website
+									<a class= "solutionLink" href="http://wixstats.com/?a=24114&c=1698&s1=" target="_blank">
+										<p><img src='images/WIX.png' alt='Wix' class='solutionIcon'>Wix</p>
+										<p class="explanation">If you're looking to create a simple website, using Wix will often be more cost effective than purchasing a custom built solution. You will be able to pick a template and edit it any way you like.</p>
+									</a>
+							</li>
+							<li>//Purchasing
+									<a class= "solutionLink" href="https://amzn.to/2yFJxs5" target="_blank">
+										<p><img src='images/AMAZON.png' alt='Amazon Business' class='solutionIcon'>Amazon Business</p>
+										<p class="explanation">The free Amazon Business account turns the consumer retailer into a reliable vendor for business purchases with purchasing system integration, quantity discounts, and corporate purchasing accounts.</p>
+									</a>
+							</li>
+							<li>//VPN
+								<a class = "solutionLink" href="https://go.nordvpn.net/aff_c?offer_id=15&aff_id=2495&aff_sub={BATCHEVENTID}&url_id=263" target="_blank">
+									<p><img src='images/NORDVPN.png' alt='NordVPN' class='solutionIcon'>NordVPN</p>
+									<p class="explanation">There are hundreds of options for VPNs, each with its pros/cons. NordVPN is a good general recommendation for a secure VPN service. Contact us if you would like to explore more options in detail.</p>
+								</a>
+							</li>
+						</ul>
+						<ul class="trioList inlineBlock">
+							<li>//E-Commerce
+								<a class= "solutionLink" href="https://www.shopify.com/?ref=valuace-llc&utm_source=web" target="_blank">
+									<p><img src='images/SHOPIFY.png' alt='Shopify' class='solutionIcon'>Shopify</p>
+									<p class="explanation">It is very easy to setup an E-Commerce shop on Shopify, and the unparalleled selection of add-ons will allow you to improve and customize your store as it grows.<br /><br /></p>
+								</a>
+							</li>
+							<li>//CRM
+									<a class= "solutionLink" href="http://hubs.to/pLqSt" target="_blank">
+										<p><img src='images/HUBSPOT.png' alt='Hubspot' class='solutionIcon'>Hubspot</p>
+										<p class="explanation">Hubspot offers a great Customer Relationship Management (CRM) tool for free, which is a must for any sales force. They also offer tools for managing relationship such as marketing, sales, and customer service.</p>
+									</a>
+							</li>
+							<li>//Coming soon...
+								<p><img src='images/MainLogo1024.png' alt='Coming Soon' class='solutionIcon'></p>
+								<p class="explanation">More recommendations will be added as we discover more great solutions!<br /><br /><br /><br /></p>
+							</li>
+						</ul>
+					</p>
+					<p class="explanation">
+							If you are in search for something you don't see above, it is most likely that the available solutions are not one-size-fits-all. Feel free to <a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank">contact us</a>, and we will be more than happy to explore appropriate options with you.
+					</p>
+				</div> -->
+			<hr class="smallSplit" />
+			<p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
+		</div>
+	</div>
+	<script>
+		var slideOnto = function (elementSelector) {
+			document.querySelector(elementSelector).scrollIntoView({
+				block: "start",
+				behavior: "smooth"
+			});
+		};
+	</script>
+</body>
+
+</html>
