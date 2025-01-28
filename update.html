@@ -277,6 +277,26 @@
 			font-size: 1.5vw;
 		}
 
+		.longBlock p.highlight {
+			font-size: 2vw;
+			font-weight: 500;
+		}
+
+		.longBlock div.trioSplit {
+			width: 8vw;
+			margin-left: 0;
+			margin-top: 0;
+			margin-bottom: 2vw;
+			height: 0.2vw;
+			color: rgba(27, 27, 27, 1);
+			background-color: rgba(27, 27, 27, 1);
+		}
+
+		.longBlock p.supporting {
+			font-size: 1.2vw;
+			font-weight: 300;
+		}
+
 		.longBlock ul.trioList {
 			width: 35vw;
 			list-style-type: none;
@@ -355,6 +375,35 @@
 			border-style: solid;
 			border-width: 0.3vw;
 			padding: 1vw;
+		}
+
+		.caseStudyContainer {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2vw;
+			width: 100%;
+		}
+
+		.caseBlock {
+				flex: 0 1 calc(45% - 2vw);
+				min-width: 8rem;
+				display: flex;
+				flex-direction: column;
+				border-style: solid;
+				border-width: 0.3vw;
+				padding: 2vw;
+				margin: 0;
+		}
+
+		.caseTitleBlock {
+			display: flex;
+			align-items: flex-end;
+		}
+
+		.solutionLink {
+				flex: 1;
+				display: flex; 
+				flex-direction: column;
 		}
 
 		.solutionIcon {
@@ -495,75 +544,82 @@
 					<p>Coming Soon.</p>
 				</div> -->
 			<h1 id="cases">//Our Work</h1>
-			<div class="longBlock inlineBlock">Here are some case studies of Instance Lab's past solutions
+			
+			<div class="longBlock inlineBlock">
+				<p class="headline">Measureable Business Impact</p>
+				<p class="headline-minor">Driven by</p>
+				<p class="headline">Cutting-Edge Technology</p>
 				<hr class="trioSplit" />
+				Here are some of the solutions we have developed for our clients
 				<p class="explanation">
-					Our custom solutions fit each customer's unique needs. We walk you through establishing targets,
-					developing an MVP, and iterating through the product-market fit finding process.
+					Click anywhere to get in touch with us and discuss how we can help you achieve your goals!
 				</p>
+				<div class="caseStudyContainer">
+					<div class="caseBlock">
+						<div class="caseTitleBlock">
+							<img src="images/IL1.png" alt="Logo" class="solutionIcon">
+							<p>Interleukin-1</p>
+						</div>
+						<p class="highlight">
+							Over 41,000 hours of labor saved and growing
+						</p>
+						<div class="trioSplit"></div>
+						<p class="explanation"><b><i>Automatic Train Operation System:</i></b> Instance Lab	automated the monorail operation at a busy tourist destination, resulting in dramatic cost savings on labor and training.</p>
+						<p class="explanation">The automation has also eliminated the risk of human-error, which was the leading cause of safety incidents.</p>
+						<p class="explanation">It started operations 4 years ago, and continues to operate autonomously. The autonomous system has been incident-free since installation, and continues to extend its safety record.</p>
+						<a class="solutionLink" href="https://goo.gl/forms/VefbSfgdEz9wrHaz1"
+						target="_blank">
+							<p class="supporting">Interleukin-1 leads the class for the system's auditability, safety record, and the capacity for cost-savings through automation. <b>Click here to Contact Us</b> to learn more about adopting Interleukin-1 for your rail-based transportation system</p>
+						</a>
+					</div>
+					<div class="caseBlock">
+						<div class="caseTitleBlock">
+							<img src="images/PRINCETON.png" alt="Logo" class="solutionIcon">
+							<p>Princeton Univeristy</p>
+						</div>
+						<p class="highlight">
+							Reduced research session error/failure rates from 7.77% to 0.57%
+						</p>
+						<div class="trioSplit"></div>
+						<p class="explanation"><b><i>User Research Interface:</i></b> Instance Lab	built and maintained the User Research Interface and Data Collection system for a group of leading researchers from multiple prominent Research Universities.</p>
+						<p class="explanation">The system included a scalable backend to collect, store, and deliver over 130,000 experiment conditions and 31,000 user interactions without performance issues.</p>
+						<p class="explanation">The interface was highly praised by the journal reviewer to be a "truly impressive interface," and Instance Lab's "excellent research assistance" was credited in the paper.</p>
+						</p>
+					</div>
+					<div class="caseBlock">
+						<div class="caseTitleBlock">
+							<img src="images/MVP.png" alt="Logo" class="solutionIcon">
+							<p>MyVote Project</p>
+						</div>
+						<p class="highlight">
+							Shortened data processing time by over 3 times
+						</p>
+						<div class="trioSplit"></div>
+						<p class="explanation"><b><i>Data & Content Management System:</i></b> Instance Lab	re-architected the existing data processing system to improve internal operations, and built a new web application to support new user experiences.</p>
+						<p class="explanation">The new data architecture and processing system shortened data processing & deployment time by over 3 times, which also had a huge impact on work satisfaction.</p>
+						<p class="explanation">The new data architecture also allowed the new web application to support a novel and innovative user experience of being able to cross reference policy research with associated political candidate and election information</p>
+						</p>
+					</div>
+					<div class="caseBlock">
+						<div class="caseTitleBlock">
+							<img src="images/BWL.png" alt="Logo" class="solutionIcon">
+							<p>Barlow Williams Law</p>
+						</div>
+						<p class="highlight">
+							Powering a flat-fee legal service with automation
+						</p>
+						<div class="trioSplit"></div>
+						<p class="explanation"><b><i>Automated Legal Document Processing:</i></b> Instance Lab	built and maintained the automated system for data collection and document processing for a law firm looking to scale its operation.</p>
+						<p class="explanation">The automated system brought significant cost savings by eliminating time-consuming manual data intake process.</p>
+						<p class="explanation">The legal document processing system dramatically reduced attorney workload with automatically generated documents, and reduced the chance of human error.</p>
+						<p class="explanation">The automation powered the law firm's pursuit to scale operations by offering a flat-free legal service package.</p>
+						</p>
+					</div>
+			</div>
 				<p class="explanation">
-					Even if you don't have a concrete plan for how to launch, develop, or grow your product, we can help
-					you establish your proudct strategy.
+					<!-- cta on helpign you too -->
+					Even if you don't have a concrete plan for how to use technology, we can help you develop a strategy.
 				</p>
-				<ul class="trioList inlineBlock">
-					<li class="caseBlock">//Operation Automation
-						<a class="solutionLink" href="#" target="_blank">
-							<p><img src='images/IL1.png' alt='Logo' class='solutionIcon'>interleukin-1</p>
-							<p class="explanation"><b><i>Automatic Train Operation System:</i></b> Instance Lab
-								developed the system to automate monorail train operation, as well as safety & audit
-								systems.</p>
-							<p class="explanation">It continues to operate trains autonomously since its launch in 2020
-							</p>
-							<p class="explanation">Full case study coming soon...</p>
-						</a>
-					</li>
-					<li class="caseBlock">//Automated Proposal & Invoicing
-						<a class="solutionLink" href="https://www.shopify.com/?ref=valuace-llc&utm_source=web"
-							target="_blank">
-							<p><img src='images/SGID.png' alt='Spring Green Interior Design' class='solutionIcon'>SG
-								Interior Design</p>
-							<p class="explanation"><b><i>Inventory Management & Proposal Generation:</i></b> Spring
-								Green Interior Design had a large database of SKUs, which was getting looked up manually
-								in order to generate proposals and invoices</p>
-							<p class="explanation">Instance Lab created an automatic propsal & inventory
-										generation system along with an easy database look up, making day-to-day
-										operations singificantly more scalable</p>
-							<p class="explanation">Full case study coming soon...</p>
-						</a>
-					</li>
-					<!-- <li class="caseBlock">//More to come...
-								<p><img src='images/MainLogo1024.png' alt='Coming Soon' class='solutionIcon'></p>
-								<p class="explanation">Coming soon: Full case studies and testimonials<br /><br /><br /><br /></p>
-							</li> -->
-				</ul>
-				<ul class="trioList inlineBlock">
-					<li class="caseBlock">//Legal Documents Automation
-						<a class="solutionLink" href="https://www.barlowwilliams.law/" target="_blank">
-							<p><img src='images/BWL.png' alt='Logo' class='solutionIcon'>Barlow Williams Law</p>
-							<p class="explanation"><b><i>Automated Legal Document Preparation:</i></b> Instance Lab
-								developed the system to automatically generate multiple legal documents based on
-								information collected from the law firm's clients</p>
-							<p class="explanation">The law firm was able to leverage the resulting operational
-								efficiency to offer an introductory flat-rate legal service</p>
-							<p class="explanation">Full case study coming soon...</p>
-						</a>
-					</li>
-
-					<li class="caseBlock">//User Research Interface
-						<a class="solutionLink" href="http://hubs.to/pLqSt" target="_blank">
-							<p><img src='images/PRINCETON.png' alt='Princeton' class='solutionIcon'>Princeton University
-							</p>
-							<p class="explanation"><b><i>User Data Collection & Manipulation:</i></b> An undisclosed
-								research group is conducting research on user behavior, and needed a user interface to
-								conduct the research</p>
-							<p class="explanation">Instance Lab overhauled an existing UI prototype to better fit the
-								experiment designs, and introduce additional behavioral data.</p>
-							<p class="explanation">We also introduced helpful data manipulation tools in order to aid
-								with understanding the collected behavioral data</p>
-							<p class="explanation">Full case study coming soon...</p>
-						</a>
-					</li>
-				</ul>
 				<p class="explanation">
 					<a href="https://goo.gl/forms/VefbSfgdEz9wrHaz1" target="_blank"><b><i>Let's Chat!: Click here to
 								connect with us</i></b></a>, and talk about how we can achieve your goals for your
@@ -640,8 +696,8 @@
 					<p class="explanation">“Your deep knowledge of the codebase and your fast response times have been really invaluable during the analysis process, so I just really want to thank you, both personally, and on behalf of the whole team”</p>
 				</div>
 				<div class="trioBlock indent inlineBlock">
-					<img src='images/PRINCETON.png' alt='Princeton Univeristy' class='solutionIcon'>
-					Dean @Princeton
+					<img src='images/WHARTON.png' alt='UPenn Wharton' class='solutionIcon'>
+					Dean @Wharton
 					<hr class="trioSplit">
 					<p class="explanation">“We really appreciated your expertise and professionalism. I'll be recommending you to anyone needing help with technical projects, and hopefully we'll have a chance to collaborate again in the future”</p>
 				</div>
