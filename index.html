@@ -403,7 +403,13 @@
 
 		.caseTitleBlock {
 			display: flex;
-			align-items: flex-end;
+			align-items: start;
+		}
+		
+		.caseTitleBlock img {
+			width: 6vw;
+			height: 6vw;
+			padding: 0.5vw;
 		}
 
 		.solutionLink {
@@ -547,7 +553,7 @@
 			<img src='images/SGID.png' alt='Spring Green Interior Design' class='siteIcon'>
 			<img src='images/P75.png' alt='PointSeventyFive' class='siteIcon'>
 			<img src='images/BWL.png' alt='Barlow Williams Law' class='siteIcon'>
-			<!-- <img src='images/PRINCETON.png' alt='Princeton Univeristy' class='siteIcon'> -->
+			<img src='images/PRINCETON_DEPT.png' alt='Princeton Univeristy' class='siteIcon'>
 			<img src='images/MVP.png' alt='MyVote Project' class='siteIcon'>
 
 			<hr class="smallSplit" />
@@ -570,7 +576,7 @@
 					<div class="caseBlock">
 						<div class="caseTitleBlock">
 							<img src="images/IL1.png" alt="Logo" class="solutionIcon">
-							<p>Interleukin-1</p>
+							<p class="clientName">Interleukin-1</p>
 						</div>
 						<p class="highlight">
 							Over 41,000 hours of labor saved and growing
@@ -584,10 +590,10 @@
 							<p class="supporting">Interleukin-1 leads the class for the system's auditability, safety record, and the capacity for cost-savings through automation. <b>Click here to Contact Us</b> to learn more about adopting Interleukin-1 for your rail-based transportation system</p>
 						</a>
 					</div>
-					<!-- <div class="caseBlock">
+					<div class="caseBlock">
 						<div class="caseTitleBlock">
-							<img src="images/PRINCETON.png" alt="Logo" class="solutionIcon">
-							<p>Princeton Univeristy</p>
+							<img src="images/PRINCETON_POL.png" alt="Logo" class="solutionIcon">
+							<p class="clientName">Department of Politics, Princeton Univeristy</p>
 						</div>
 						<p class="highlight">
 							Reduced research session error/failure rates from 7.77% to 0.57%
@@ -595,13 +601,17 @@
 						<div class="trioSplit"></div>
 						<p class="explanation"><b><i>User Research Interface:</i></b> Instance Lab	built and maintained the User Research Interface and Data Collection system for a group of leading researchers from multiple prominent Research Universities.</p>
 						<p class="explanation">The system included a scalable backend to collect, store, and deliver over 130,000 experiment conditions and 31,000 user interactions without performance issues.</p>
-						<p class="explanation">The interface was highly praised by the journal reviewer to be a "truly impressive interface," and Instance Lab's "excellent research assistance" was credited in the paper.</p>
+						<p class="explanation">The interface was highly praised by the journal reviewer to be a "truly impressive interface," and Instance Lab's "excellent research assistance" was credited in the paper on PNAS.</p>
 						</p>
-					</div> -->
+						<a class="solutionLink" href="https://www.pnas.org/doi/10.1073/pnas.2318127122#con5"
+						target="_blank">
+							<p class="supporting"><b>Click here</b> to read the paper on PNAS</p>
+						</a>
+					</div>
 					<div class="caseBlock">
 						<div class="caseTitleBlock">
 							<img src="images/MVP.png" alt="Logo" class="solutionIcon">
-							<p>MyVote Project</p>
+							<p class="clientName">MyVote Project</p>
 						</div>
 						<p class="highlight">
 							Shortened data processing time by over 3 times
@@ -615,7 +625,7 @@
 					<div class="caseBlock">
 						<div class="caseTitleBlock">
 							<img src="images/BWL.png" alt="Logo" class="solutionIcon">
-							<p>Barlow Williams Law</p>
+							<p class="clientName">Barlow Williams Law</p>
 						</div>
 						<p class="highlight">
 							Powering a flat-fee legal service with automation
