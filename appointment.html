@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Appointment — Instance Lab LLC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel='apple-touch-icon' href='favicon.png'>
+    <link rel='apple-touch-icon-precomposed' href='favicon.png'>
+    <link rel='icon' type='image/png' href='favicon.png'>
+
+    <style>
+        html {
+            min-height: 100%;
+            position: relative;
+            margin: 0;
+            font-family: Roboto;
+            font-size: 3vw;
+            color: rgba(27, 27, 27, 1);
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(27, 27, 27, 1);
+        }
+
+        .linkPointer {
+            cursor: pointer;
+        }
+
+        .flatBottom {
+            margin-bottom: 0;
+        }
+
+        .cta {
+            padding: 2vw;
+            font-weight: 500;
+            background-color: hsla(33, 95%, 55%, 1);
+            color: white;
+            cursor: pointer;
+        }
+
+        #siteBorder {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: auto;
+        }
+
+        #mainLogo {
+            position: absolute;
+            width: 18vw;
+            left: 6vw;
+            top: 8vw;
+        }
+
+        #topNav {
+            position: absolute;
+            right: 6vw;
+            top: 8vw;
+        }
+
+        #topNav a {
+            color: rgba(27, 27, 27, 1);
+            margin-left: 2vw;
+            padding: 1vw;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.75s;
+        }
+
+        #topNav a:hover {
+            background-color: rgba(27, 27, 27, 1);
+            color: rgba(255, 255, 255, 1);
+            cursor: pointer;
+            transition: all 0.75s;
+        }
+
+        #topNav a:visited {
+            color: rgba(27, 27, 27, 1);
+        }
+
+        #console {
+            position: absolute;
+            font-size: 2vw;
+            top: 43vw;
+            left: 40vw;
+        }
+
+        #midSplit {
+            position: absolute;
+            width: 60vw;
+            right: 0vw;
+            top: 30vw;
+            height: 0.5vw;
+            color: rgba(27, 27, 27, 1);
+            background-color: rgba(27, 27, 27, 1);
+            border-color: rgba(27, 27, 27, 1);
+        }
+
+        .smallSplit {
+            width: 20vw;
+            margin-top: 5vw;
+            margin-left: auto;
+            margin-right: 0;
+            height: 0.3vw;
+            color: rgba(27, 27, 27, 1);
+            background-color: rgba(27, 27, 27, 1);
+        }
+
+        .trioSplit {
+            position: relative;
+            width: 7vw;
+            margin-left: 0;
+            margin-top: 2vw;
+            margin-bottom: 4vw;
+            height: 0.1vw;
+            color: rgba(27, 27, 27, 1);
+            background-color: rgba(27, 27, 27, 1);
+        }
+
+        #products {
+            perspective: 1024px;
+        }
+
+        #foldBody {
+            position: static;
+            height: 100%;
+        }
+
+        #textBody {
+            position: absolute;
+            left: 10vw;
+            top: 45vw;
+        }
+
+        #textBody h1 {
+            margin-top: 0;
+            font-size: 4vw;
+        }
+
+        .indent {
+            margin-left: 5.5vw;
+        }
+
+        .inlineBlock {
+            display: inline-block;
+        }
+
+        .longBlock {
+            width: 80vw;
+            font-size: 2vw;
+            line-height: 1.5;
+            padding: 2vw;
+            margin-top: 2vw;
+            border-style: solid;
+            border-width: 0.3vw;
+            transition: all 0.75s;
+            cursor: pointer;
+        }
+
+        .longBlock p.headline {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 3vw;
+            font-weight: 900;
+        }
+
+        .longBlock p.explanation {
+            font-size: 1.5vw;
+        }
+
+        .absolute-grid {
+            position: relative;
+        }
+
+        .calendarBlock {
+            border-style: none;
+            border-width: 0;
+            padding: 0;
+            cursor: default;
+						margin-top: 10vh;
+        }
+
+        #footer {
+            font-size: 1vw;
+            text-align: center;
+            margin-top: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="siteBorder">
+        <img id="mainLogo" src="images/MainLogo1024.png" />
+        <span id="topNav">
+            <a href="index.html">Home</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="update.html">Updates</a>
+        </span>
+				<hr id="midSplit" />
+        <div id="textBody">
+            <h1>//Schedule</h1>
+
+            <div class="longBlock inlineBlock">
+                <p class="headline">Book a Time</p>
+                <hr class="trioSplit" />
+                <p class="explanation">AI can accelerate planning and get you about 90% of the way there — generating drafts, surfacing options, and automating routine tasks. However, for nuanced decisions, edge cases, and domain-specific trade-offs, experienced professionals are still essential to finish the job correctly.</p>
+                <p class="explanation">Use the calendar below to schedule a consultation. We'll use AI to prepare a productive starting point, then apply human expertise to solve the tricky parts.</p>
+            </div>
+
+            <div class="calendarBlock">
+                <!-- Cal inline embed code begins -->
+                <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-60"></div>
+                <script type="text/javascript">
+                  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "60", {origin:"https://app.cal.com"});
+
+                  Cal.ns["60"]("inline", {
+                    elementOrSelector:"#my-cal-inline-60",
+                    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                    calLink: "instancelab/60",
+                  });
+
+                  Cal.ns["60"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+                  </script>
+                  <!-- Cal inline embed code ends -->
+            </div>
+
+            <p id="footer">Copyright (C) Instance Lab LLC. All Rights Reserved</p>
+        </div>
+    </div>
+</body>
+
+</html>
